@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>404 - File or directory not found | McTrees</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://api.mctrees.net/analytics.js"></script>
+    <script>
+        ga('set', 'page', '404');
+        ga('send', 'pageview');
+
+    </script>
+
+    <?php include "../includes/styles.html"></div>
+    <script src="/lib/scroll.js"></script>
+    <script src="/lib/w3.js"></script>
+    <script src="/lib/httpGet.js"></script>
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function NavBar() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+    <script>
+
+        function loaderfunction() {
+            document.getElementById("menupagename").innerHTML = document.title.slice(0, -9);
+            document.getElementById(window.location.pathname + "").classList.add('w3-white');
+            document.getElementById(window.location.pathname + "small").classList.add('w3-grey');
+            document.getElementById(window.location.pathname + "small").classList.remove('w3-white');
+        }
+
+    </script>
+</head>
+
+
+
+<script scr="/lib/httpGet.js"></script>
+
+<body onload="loaderfunction();">
+
+    <!-- Navbar -->
+    <?php include "../includes/menu.html"?>
+
+
+
+
+    <!-- Header -->
+    <header class="w3-container w3-blue w3-center" style="padding:50px 51px" onload="document.getElementById(location.pathname).className = 'w3-white';">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1 class="w3-margin w3-jumbo" style="padding-top:51px;">404</h1>
+        <p class="w3-xlarge">File or directory not found</p>
+    </header>
+    <!-- First Grid -->
+
+    <div class="w3-display-container" style="height:300px;">
+        <div class="w3-row-padding w3-padding-16 w3-container">
+            <div class="w3-content" id="info">
+                <br>
+                <h3 class="w3-padding" style="text-align: center; font-style: italic;" id="pun">
+                    <!--PUNZZZZZZZZZZZZZZ-->
+                    <?php file_get_contents("http://m.mctrees.net/x/pun.html"); ?>
+
+                </h3>
+                <h5 class="w3-padding">Sorry, but the resource you are looking for might have been removed, had its name changed, or is temporarily unavailable. If you believe you have found a broken link please <a href=/contact/>Contact us.</a>
+                </h5>
+                <p class="w3-text-grey">You can go to the <a href="/">Homepage </a> </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Footer -->
+    <?php include "../includes/footer.html"?>
+</body>
+
+</html>

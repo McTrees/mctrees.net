@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <title>Home | McTrees</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://api.mctrees.net/analytics.js"></script>
+    <script>
+        ga('send', 'pageview');
+
+    </script>
+
+<?php include "includes/styles.html"?>
+    <script src="/lib/scroll.js"></script>
+    <script src="/lib/w3.js"></script>
+
+    <!---cookie script-->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="https://mctrees.net/lib/cookie.js"></script>
+
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function NavBar() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+	<script>
+
+        function loaderfunction() {
+            document.getElementById("menupagename").innerHTML = document.title.slice(0, -9);
+            document.getElementById(window.location.pathname + "").classList.add('w3-white');
+            document.getElementById(window.location.pathname + "small").classList.add('w3-grey');
+            document.getElementById(window.location.pathname + "small").classList.remove('w3-white');
+        }
+
+    </script>
+</head>
+
+
+<body onload="loaderfunction();">
+    <!-- Navbar -->
+<?php include 'includes/menu.html';?>
+    <!-- Header -->
+    <header class="w3-container w3-blue w3-center" style="padding:128px 16px">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1 class="w3-margin w3-jumbo">McTrees</h1>
+        <p class="w3-xlarge">Offical Website</p> <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="EPPZScrollTo.scrollVerticalToElementById('about', 90);">About</button> </header>
+    </header>
+	<!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content" id="about">
+            <div class="w3-twothird">
+                <h1>About us</h1>
+                <h5 class="w3-padding-32">McTrees is a small non for profit organization based in the North West England. We offer many services including web hosting, game hosting as well as many other computational services.</h5>
+                <p class="w3-text-grey">McTrees was first founded by Robbie in 2014. Our server was run on an old overworked laptop. We had no registered domain and no proper network infrastructure. It was literally a laptop running the... <a href="/about"> Read more </a> </p>
+            </div>
+            <div class="w3-third w3-center"> <br> <img src="/images/global/logo.png"> </div>
+        </div>
+    </div>
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content" id="about">
+            <div class="w3-third w3-center"> <br> <img src="/images/page/hosting/web_hosting.png"> </div>
+            <div class="w3-twothird">
+                <h1>Web Hosting</h1>
+                <h5 class="w3-padding-32">At McTrees we offer dedicated reliable hosting solutions for both web applications and python scripts. </h5>
+                <p class="w3-text-grey">To find out more or get in touch, click <a href="/hosting">here</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- First Grid -->
+    <div class="w3-row-padding  w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>Contact</h1>
+                <h5 class="w3-padding-32">Contact us here though our <a href="/about">Contact form </a> </p>
+            </div>
+            <div class="w3-third w3-center"> <br><br><br> <img src="images/page/contact/email.png"> </div>
+        </div>
+    </div>
+    <?php include "./includes/footer.html"?>
+</body>
+
+</html>

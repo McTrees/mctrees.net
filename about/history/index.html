@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About - History| McTrees</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://api.mctrees.net/analytics.js"></script><script>ga('send', 'pageview');</script>
+
+    <?php include "../../includes/styles.html"?>
+    <script src="/lib/scroll.js"></script>
+    <script src="/lib/w3.js"></script>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function NavBar() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+    <script>
+
+        function loaderfunction() {
+            document.getElementById("menupagename").innerHTML = document.title.slice(0, -9);
+            document.getElementById(window.location.pathname.substring(0, window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/")).lastIndexOf("/")) + "/" + "").classList.add('w3-white');
+            document.getElementById(window.location.pathname + "small").classList.add('w3-grey');
+            document.getElementById(window.location.pathname + "small").classList.remove('w3-white');
+        }
+
+    </script>
+</head>
+
+<body onload="loaderfunction();">
+
+    <!-- Navbar -->
+    <?php include "../../includes/menu.html"?>
+
+
+    <!-- Header -->
+    <header class="w3-container w3-blue w3-center" style="padding:50px 51px" onload="document.getElementById(location.pathname).className = 'w3-white';">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1 class="w3-margin w3-jumbo" style="padding-top:51px;">History</h1>
+    </header>
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content" id="about">
+            <div class="w3-whole">
+                <h1>Introduction</h1>
+                <h5 class="w3-padding-32">McTrees is a small non for profit organization based in the North West England. We offer many services including web hosting, game hosting as well as many other computational services. For more info see <a href="/hosting"> Hosting</a> for more information.</h5>
+                <p class="w3-text-grey"> We offer many services including web hosting, game hosting as well as many other computational services. For more info see <a href="/hosting"> Hosting</a> for more information.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content" id="about">
+            <div class="w3-twothird">
+                <h1>History</h1>
+                <h5 class="w3-padding-32">"I just got bored one sunday afternoon" - Robbie</h5>
+                <p class="w3-text-grey">McTrees was first founded by Robbie in 2014. Our server was run on an old overworked laptop. We had no registered domain and no proper network infrastructure. It was literally a laptop running the windows 'minecraft server'. Over the years, more joined the McTrees cause and we now have 4 admins, Robbie, Ben, Calvin and Oliver.</p>
+                <p class="w3-text-grey">Later the next year, in september , we registered for a free DDNS account. With that we got our first ‘domain’: http://mctrees.ddns.net/ . early the next year we began hosting our first website. Its design can be found <a href="http://archive.mctrees.net/2015">here</a> in the <a href="http://archive.mctrees.net/">McTrees archive </a>. This site was still being hosted on an overworked laptop with WAMP (a free piece of software) as the web server.</p>
+                <p class="w3-text-grey"> At the start of 2016 we registered our first ‘proper’ domain, <a href="http://mctrees.net"> mctrees.net</a>. With that came updates to our hosting and networking. At this point we were running the site with an old desktop, that was certainly better suited to the task.</p>
+                <p class="w3-text-grey"> A few months later we redesigned the website. This design stuck, with a few minor alterations, for over a year. Unfortunately, you cannot find this in the McTrees Archive, as it was destroyed during the transition to the new site.<!--This design can be found at <a href="http://archive.mctrees.net/2016">here</a>--></p>
+            </div>
+            <div class="w3-third w3-center"><img src="/images/page/about/oldSetup.png" id="oldsetup" style="padding-"> </div>
+        </div>
+    </div>
+
+
+
+    <!-- First Grid -->
+    <div class="w3-row-padding  w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-whole">
+                <h1>Current Day</h1>
+                <h5 class="w3-padding-32">Fast forward a year and a half and McTrees is now being run in a visualized install of Linux, with Debian and apache.</h5>
+                <p class="w3-text-grey"> We have load balancing and redundancy as well as a plethora of security and backup features. In april 2017 we finally overhauled the main design of website to be compliant with google's material design language as well as a lot more intuitive to the end-user. The new design features better mobile support and is more resource efficient. You are viewing the current design right now.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <?php include "../../includes/footer.html"?>
+</body>
+
+</html>

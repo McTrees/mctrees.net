@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Private VPN | McTrees</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://api.mctrees.net/analytics.js"></script>
+    <script>
+        ga('send', 'pageview');
+
+    </script>
+
+    <?php include "../includes/styles.html"?>
+    <script src="/lib/scroll.js"></script>
+    <script src="/lib/w3.js"></script>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function NavBar() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+    <script>
+        w3.includeHTML();
+
+        function loaderfunction() {
+            document.getElementById("menupagename").innerHTML = document.title.slice(0, -9);
+            document.getElementById(window.location.pathname + "").classList.add('w3-white');
+            document.getElementById(window.location.pathname + "small").classList.add('w3-grey');
+            document.getElementById(window.location.pathname + "small").classList.remove('w3-white');
+        }
+
+    </script>
+</head>
+
+
+<body onload="loaderfunction();">
+
+    <!-- Navbar -->
+   <?php include "../includes/menu.html"?>
+
+
+    <!-- Header -->
+    <header class="w3-container w3-blue w3-center" style="padding:50px 51px" onload="document.getElementById(location.pathname).className = 'w3-white';">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1 class="w3-margin w3-jumbo" style="padding-top:51px;">Private VPN</h1>
+    </header>
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content" id="about">
+            <div class="w3-whole">
+                <h1>Introduction</h1>
+                <h5 class="w3-padding-32">At McTrees we offer dedicated reliable VPN solutions via OpenVPN. All of your data is secured, and we can't read it. Questions? Get in touch through our contact form.</h5>
+            </div>
+        </div>
+    </div>
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content" id="about">
+            <div class="w3-twothird">
+                <a href="/hosting/discord/" class="nounderline">
+                    <h1>McVPN</h1>
+                </a>
+                <p class="w3-text-grey">Here at McTrees, we offer a Private VPN which you can use to get around content restrictions and more. All your data is managed by our high-performance Linux Server. Click <a href="/services/buy/vpn">here</a> for pricing.</p>
+            </div>
+            <div class="w3-third w3-center">
+                <a href="/services/vpn/buy" class="nounderline"><img src="https://img00.deviantart.net/63a9/i/2013/010/6/5/openvpn_icon_by_archeinre-d5r1nls.png" id="pageimage" style="padding-"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <?php include "../includes/footer.html"?>
+</body>
+
+</html>

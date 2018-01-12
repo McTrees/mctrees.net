@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact | McTrees</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include "../includes/styles.html"?>
+    <script src="/lib/scroll.js"></script>
+    <script src="/lib/w3.js"></script>
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+    <!--<script src="js/index.js"></script>-->
+    <script src="https://api.mctrees.net/analytics.js"></script>
+    <script>
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function NavBar() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+    <script>
+
+        function loaderfunction() {
+            document.getElementById("menupagename").innerHTML = document.title.slice(0, -9);
+            document.getElementById(window.location.pathname + "").classList.add('w3-white');
+            document.getElementById(window.location.pathname + "small").classList.add('w3-grey');
+            document.getElementById(window.location.pathname + "small").classList.remove('w3-white');
+        }
+    </script>
+</head>
+
+
+<body onload="loaderfunction();">
+    <!-- Navbar -->
+    <?php include "../includes/menu.html"?>
+    <!-- Header -->
+    <header class="w3-container w3-blue w3-center" style="padding:50px 51px">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1 class="w3-margin w3-jumbo" style="padding-top:51px;">Contact</h1>
+    </header>
+    <div class="w3-row-padding w3-padding-64 w3-container w3-center">
+        <div class="w3-content" id="about">
+            <div class="w3-whole">
+                <h1 style="font-size:50px!important">Contact Us</h1>
+                <h5 class="w3-padding-32">You can contact us via this contact form, just select who you would like to send the email. </h5>
+            </div>
+        </div>
+    </div>
+	<div class="w3-row-padding  w3-container w3-light-grey">
+        <div class="w3-content">
+            <div class="w3-whole w3-white " style="width: 450px;margin: auto;">
+				<form class="contact " style="padding:16px, 16px, 16px, 16px width: 450px;">
+                    <h2>
+						<input placeholder="Name" type="text" value="" required>
+						<input placeholder="Email address" type="email" onblur="this.setAttribute('value', this.value);" value="" required>
+						<span class="validation-text">Please enter a valid email address.</span>
+						<div class="flex">
+							<textarea placeholder="Message" rows="1" required></textarea>
+						</div>
+					</h2>
+                    <button>Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <br><br>
+    <?php include "../includes/footer.html"?>
+</body>
+
+</html>

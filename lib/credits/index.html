@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Open source libraries| McTrees</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://api.mctrees.net/analytics.js"></script>
+    <script>
+        ga('send', 'pageview');
+
+    </script>
+
+   <?php include "../../includes/styles.html"?>
+    <script src="/lib/scroll.js"></script>
+    <script src="/lib/w3.js"></script>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function NavBar() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+    <script>
+
+        function loaderfunction() {
+            document.getElementById("menupagename").innerHTML = document.title.slice(0, -9);
+            document.getElementById(window.location.pathname + "").classList.add('w3-white');
+            document.getElementById(window.location.pathname + "small").classList.add('w3-grey');
+            document.getElementById(window.location.pathname + "small").classList.remove('w3-white');
+        }
+
+    </script>
+</head>
+
+
+<body onload="loaderfunction();">
+
+    <!-- Navbar -->
+    <?php include "../../includes/menu.html"?>
+    <!-- Header -->
+    <header class="w3-container w3-blue w3-center" style="padding:50px 51px" onload="document.getElementById(location.pathname).className = 'w3-white';">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1 class="w3-margin w3-jumbo" style="padding-top:51px;">Open source libraries</h1>
+    </header>
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content" id="about">
+            <div class="w3-whole">
+                <h1>Introduction</h1>
+                <h5 class="w3-padding-32">We are required to list some of the JS, HTML and CSS libraries that we have used. As a courtesy measure we have listed them all used libraries on this page. We have also included a brief description of each file as well as link to the original source.</h5>
+                <p class="w3-text-grey"><a>McTrees can not be held responsible for these 3rd party applications and places no guarantee of the safety of any of the external links listen on this page. For more information see <a href="/legal"> our legal page </a>.
+                    <p>
+            </div>
+        </div>
+    </div>
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content" id="about">
+
+            <h1>JS Libraries</h1>
+            <dl>
+                <dt><h5>angular-scroll</h5></dt>
+                <dd>
+                    <p class="w3-text-grey">Used for smooth scrolling from one point on the page to a single id tagged element. Download this library <a href="https://github.com/oblador/angular-scroll">here</a>.</p>
+                </dd>
+
+                <dt><h5>W3.js</dt>
+                <dd>
+                    <p class="w3-text-grey">W3.JS is a modern JavaScript library for modern HTML applications. download this library <a href="https://www.w3schools.com/w3js/">here</a>.</p>
+                </dd>
+                <dt><h5>HTTPget</dt>
+                <dd>
+                    <p class="w3-text-grey">We used code from Satya and Christian Pietsch on GitHub. View the thread <a href="https://stackoverflow.com/questions/10642289/return-html-content-as-a-string-given-url-javascript-function">here</a>.</p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content" id="about">
+
+            <h1>CSS Libraries</h1>
+            <dl>
+                <dt><h5>W3.CSS</h5></dt>
+                <dd>
+                    <p class="w3-text-grey">W3.CSS is a modern CSS framework with built-in responsiveness. Download this library <a href="https://www.w3schools.com/w3css/">here</a>.</p>
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+
+    <?php include "../../includes/footer.html"?>
+</body>
+
+</html>

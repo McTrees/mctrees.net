@@ -1,0 +1,13 @@
+<h1>WebSSH Client</h1>
+<?php
+
+if (isset($_GET["secure"])) {
+echo "<p>This version is now secure.</p>";
+echo "<a href='http://mctrees.net/tools/ssh/'>Having problems? Click here for the insecure version.</a>";
+} else {
+echo "<p>WebSSH proudly delivered by bartlweb.net</p>";
+echo "<iframe width=100% height=85%  src='https://webssh.bartlweb.net'>";
+}
+
+?>
+

@@ -1,0 +1,61 @@
+.hideoncssload {
+    visibility: hidden;
+    font-size: 0px;
+
+}
+
+header {
+    background-position: center center;
+    /*background-repeat: no-repeat;*/
+    background-attachment: fixed;
+    background-size: cover;
+    /*background-color: #464646;*/
+    /*background-image: url('/images/global/graient.jpg');*/
+    background-size: 100% 100%;
+	
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6fe496+0,32cdfd+100 */
+	background: #6fe496; /* Old browsers */
+	background: -moz-linear-gradient(left,  #6fe496 0%, #32cdfd 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #6fe496 0%,#32cdfd 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #6fe496 0%,#32cdfd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6fe496', endColorstr='#32cdfd',GradientType=1 ); /* IE6-9 */ 
+
+}
+a.nounderline:link, a.nounderline:visited, a.nounderline:hover, a.nounderline:active {
+    text-decoration: none;
+}
+
+body,h1,h2,h3,h4,h5,h6 {
+	font-family: "Lato", sans-serif
+}
+
+.w3-bar,h1,
+button {
+	font-family: "Montserrat", sans-serif
+}
+img {
+	-webkit-filter: drop-shadow(0px 16px 16px #999999);
+}
+
+
+@media all and (min-width: 600px)
+/*big screens*/
+
+{
+    #menupagename {
+        display: none;
+    }
+    #oldsetup {
+        padding-top: 150px;
+    }
+}
+
+@media all and (max-width: 600px)
+/*mobile*/
+
+{
+    #oldsetup {
+        padding-top: 30px;
+    }
+}
+

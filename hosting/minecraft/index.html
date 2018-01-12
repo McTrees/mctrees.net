@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minecraft server hosting | McTrees</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://api.mctrees.net/analytics.js"></script>
+    <script>
+        ga('send', 'pageview');
+
+    </script>
+
+   <?php include "../../includes/styles.html"?>
+    <script src="/lib/scroll.js"></script>
+    <script src="/lib/w3.js"></script>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function NavBar() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+    <script>
+
+        function loaderfunction() {
+            document.getElementById("menupagename").innerHTML = document.title.slice(0, -9);
+            document.getElementById(window.location.pathname + "").classList.add('w3-white');
+            document.getElementById(window.location.pathname + "small").classList.add('w3-grey');
+            document.getElementById(window.location.pathname + "small").classList.remove('w3-white');
+        }
+
+    </script>
+</head>
+
+
+<body onload="loaderfunction();">
+
+    <!-- Navbar -->
+    <?php include "../../includes/menu.html"?>
+
+
+    <!-- Header -->
+    <header class="w3-container w3-blue w3-center" style="padding:50px 51px" onload="document.getElementById(location.pathname).className = 'w3-white';">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1 class="w3-margin w3-jumbo" style="padding-top:51px;">Minecraft server Hosting</h1>
+    </header>
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content" id="about">
+            <div class="w3-whole">
+                <h1>Infomation</h1>
+                <h5 class="w3-padding-32">Minecraft is a </h5>
+                <p class="w3-text-grey"> At McTrees we understand that hosting for small bots can be a tedious task as many users don't have access to a low cost reliable server. We offer manny plans ranging in costs and computational power. For more infomation about our plans as well as acses to our Dicord bot dashboard please login or create an acount here. Having an account means you can control your bots and set up easy payments.</p>
+                <center>
+                    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="//location.href='https://discord.mctrees.net/login.php?service=bot&usp=plans&ref=botinfo&currency=GBP';">Log in or Create an account</button>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <?php include "../../includes/footer.html"?>
+</body>
+
+</html>
+
+</html>

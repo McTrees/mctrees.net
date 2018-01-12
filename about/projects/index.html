@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About - Projects | McTrees</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://api.mctrees.net/analytics.js"></script>
+    <script>
+        ga('send', 'pageview');
+
+    </script>
+
+    <?php include "../../includes/styles.html"?>
+    <script src="/lib/scroll.js"></script>
+    <script src="/lib/w3.js"></script>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function NavBar() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script><script>
+            w3.includeHTML();
+
+        function loaderfunction() {
+            document.getElementById("menupagename").innerHTML = document.title.slice(0, -9);
+            document.getElementById(window.location.pathname.substring(0, window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/")).lastIndexOf("/")) + "/" + "").classList.add('w3-white');
+            document.getElementById(window.location.pathname + "small").classList.add('w3-grey');
+            document.getElementById(window.location.pathname + "small").classList.remove('w3-white');
+        }
+
+    </script>
+</head>
+
+
+<body onload="setTimeout(loaderfunction,100)">
+
+    <!-- Navbar -->
+    <?php include "../../includes/menu.html"?>
+
+
+    <!-- Header -->
+    <header class="w3-container w3-blue w3-center" style="padding:50px 51px" onload="document.getElementById(location.pathname).className = 'w3-white';">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1 class="w3-margin w3-jumbo" style="padding-top:51px;">Our Other Projects</h1>
+    </header>
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content" id="about">
+            <div class="w3-whole">
+                <h1>Introduction</h1>
+                <h5 class="w3-padding-32">McTrees has many other ongowing and complted projects hoested on our servers. As well as this; every developer has their own persnal website. </h5>
+            </div>
+        </div>
+    </div>
+    <!-- Second Grid -->
+    <div id="history" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content" >
+			<h1>Personal Sites</h1>
+			<dl>
+				<dt>
+					<h5><a href="https://robbie.mctrees.net" class="nounderline">Robbie</a></h5>
+				</dt>
+				<dd>
+					<p class="w3-text-grey">
+						Robbie is the owner of McTrees and his personal site consists of mainly things he is working on at the moment, such as logon pages. He has two personal sites: <a href="https://robbie.mctrees.net">robbie.mctrees.net</a> and <a href="https://robbie2.mctrees.net">robbie2.mctrees.net</a>.
+					</p>
+				</dd>
+				<dt>
+					<h5><a href="https://oliver.mctrees.net"class="nounderline">Oliver</a></h5>
+				</dt>
+				<dd>
+					<p class="w3-text-grey">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor nunc vitae lacinia accumsan. Curabitur varius elementum euismod.
+					</p>
+				</dd>
+				<dt>
+					<h5><a href="https://ben.mctrees.net"class="nounderline">Ben</a></h5>
+				</dt>
+				<dd>
+					<p class="w3-text-grey">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor nunc vitae lacinia accumsan. Curabitur varius elementum euismod.
+					</p>
+				</dd>
+				<dt>
+					<h5><a href="https://calvin.mctrees.net"class="nounderline">Calvin</a></h5>
+				</dt>
+				<dd>
+					<p class="w3-text-grey">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor nunc vitae lacinia accumsan. Curabitur varius elementum euismod.
+					</p>
+				</dd>
+			</dl>	
+		</div>
+    </div>
+
+
+
+    <!-- First Grid -->
+    <div id="projects" class="w3-row-padding  w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-whole">
+				<h1>Other Projects</h1>
+				<dl>
+                    <dt>
+                        <h5><a href="https://starter.mctrees.net"class="nounderline">Todays Corbettmaths Starter</a></h5>
+                    </dt>
+                    <dd>
+                        <p class="w3-text-grey">
+							We decided it would be a good idea to make a website that had buttons to the current days starter, as Corbettmaths' page wasn't designed in the best way and we use them often in school. 
+                        </p>
+                    </dd>
+                    <dt>
+                        <h5><a href="https://discord.mctrees.net"class="nounderline">Discord</a></h5>
+                    </dt>
+                    <dd>
+                        <p class="w3-text-grey">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor nunc vitae lacinia accumsan. Curabitur varius elementum euismod.
+                        </p>
+                    </dd>
+                    <dt>
+                        <h5><a href="#"class="nounderline">Lorem</a></h5>
+                    </dt>
+                    <dd>
+                        <p class="w3-text-grey">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor nunc vitae lacinia accumsan. Curabitur varius elementum euismod.
+                        </p>
+                    </dd>
+                    <dt>
+                        <h5><a href="#"class="nounderline">Lorem</a></h5>
+                    </dt>
+                    <dd>
+                        <p class="w3-text-grey">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor nunc vitae lacinia accumsan. Curabitur varius elementum euismod.
+                        </p>
+                    </dd>
+                </dl>
+			</div>
+        </div>
+    </div>
+    <?php include "../../includes/footer.html"?>
+</body>
+
+</html>
