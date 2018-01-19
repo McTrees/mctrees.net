@@ -12,8 +12,8 @@
 
     </script>
 
-    <?php include "../includes/styles.html"> </?>
-    
+    <?php include "../includes/styles.html" ?>
+
     <script src="/lib/scroll.js"></script>
     <script src="/lib/w3.js"></script>
     <script src="/lib/httpGet.js"></script>
@@ -30,7 +30,6 @@
 
     </script>
     <script>
-
         function loaderfunction() {
             document.getElementById("menupagename").innerHTML = document.title.slice(0, -9);
             document.getElementById(window.location.pathname + "").classList.add('w3-white');
@@ -67,10 +66,10 @@
                 <br>
                 <h3 class="w3-padding" style="text-align: center; font-style: italic;" id="pun">
                     <!--PUNZZZZZZZZZZZZZZ-->
-                    <?php echo(file('puns.txt')) ?>
+                    <?php echo(file('puns.txt')[rand(0, sizeof(file("puns.txt")))]); ?>
 
                 </h3>
-                <h5 class="w3-padding">Sorry, but the resource you are looking for might have been removed, had its name changed, or is temporarily unavailable. If you believe you have found a broken link please <a href=/contact/>Contact us.</a>
+                <h5 class="w3-padding">Sorry, but the resource you are looking for might have been removed, had its name changed, or is temporarily unavailable. If you believe you have found a broken link please <a href="/contact/">Contact us.</a>
                 </h5>
                 <p class="w3-text-grey">You can go to the <a href="/">Homepage </a> </p>
             </div>
