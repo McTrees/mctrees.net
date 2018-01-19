@@ -12,7 +12,8 @@
 
     </script>
 
-    <?php include "../includes/styles.html"></div>
+    <?php include "../includes/styles.html"> </?>
+    
     <script src="/lib/scroll.js"></script>
     <script src="/lib/w3.js"></script>
     <script src="/lib/httpGet.js"></script>
@@ -66,7 +67,7 @@
                 <br>
                 <h3 class="w3-padding" style="text-align: center; font-style: italic;" id="pun">
                     <!--PUNZZZZZZZZZZZZZZ-->
-                    <?php file_get_contents("http://m.mctrees.net/x/pun.html"); ?>
+                    <?php echo(file('puns.txt')) ?>
 
                 </h3>
                 <h5 class="w3-padding">Sorry, but the resource you are looking for might have been removed, had its name changed, or is temporarily unavailable. If you believe you have found a broken link please <a href=/contact/>Contact us.</a>
