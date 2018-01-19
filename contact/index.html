@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact | McTrees</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://api.mctrees.net/analytics.js"></script>
+    <script>
+        ga('send', 'pageview');
+
+    </script>
+
+    <?php include "../includes/styles.html"?>
+    <script src="/lib/scroll.js"></script>
+    <script src="/lib/w3.js"></script>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function NavBar() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+	<script>
+        w3.includeHTML();
+
+        function loaderfunction() {
+            document.getElementById("menupagename").innerHTML = document.title.slice(0, -9);
+            document.getElementById(window.location.pathname + "").classList.add('w3-white');
+            document.getElementById(window.location.pathname + "small").classList.add('w3-grey');
+            document.getElementById(window.location.pathname + "small").classList.remove('w3-white');
+        }
+
+    </script>
+</head>
+
+
+<body onload="loaderfunction();">
+    <!-- Navbar -->
+    <?php include "../includes/menu.html"?>
+    <!-- Header -->
+    <header class="w3-container w3-blue w3-center" style="padding:50px 51px" onload="document.getElementById(location.pathname).className = 'w3-white';">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1 class="w3-margin w3-jumbo" style="padding-top:51px;">About Us</h1>
+    </header>
+	<!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content" id="about">
+            <div class="w3-whole">
+                <h1>How to get in touch</h1>
+                <h5 class="w3-padding-32">To get in touch with us to find out more about our web hosting, programing or web design use the email <a href="mailto:business@mctrees.net">business@mctrees.net</a> or to make a new business enquiry.</h5>
+                <p>If you are already a customer and would like to talk use the email address <a href="mailto:support@mctrees.net">support@mctrees.net</a>.</p>
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	<?php include "../includes/footer.html"?>
+</body>
+
+</html>
