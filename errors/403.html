@@ -58,7 +58,7 @@
             <div class="w3-twothird">
                 <h1>What happened?</h1>
                 <h5 class="w3-padding-32">You do not have permission to view this directory or page using the credentials that you supplied. If you believe you have found a broken link please <a href="/contact/">Contact us.</a> You can go to the <a href="/">Homepage.</a></h5>
-                <p class="w3-text-grey">In the meantime, have a pun: <i> <strong> <?php echo(file('puns.txt')[rand(0, sizeof(file("puns.txt")))]); ?> </strong> </i></p>  
+                <p class="w3-text-grey">In the meantime, have a pun: <i> <strong> <?php echo(strtolower(file('puns.txt')[rand(0, sizeof(file("puns.txt")))])); ?> </strong> </i></p>  
             </div>
             <div class="w3-third w3-center"> <br> <img src="/images/global/logo.png"> </div>
         </div>
