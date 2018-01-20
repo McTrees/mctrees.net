@@ -2,19 +2,21 @@
 <html>
 
 <head>
-    <title>403 - Forbidden: Access is denied | McTrees</title>
+    <title>403 - Permission denied | McTrees</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://api.mctrees.net/analytics.js"></script>
     <script>
-        ga('set', 'page', '403');
+        ga('set', 'page', '404');
         ga('send', 'pageview');
 
     </script>
 
-    <?php include "../includes/styles.html"?>
+    <?php include "../includes/styles.html" ?>
+
     <script src="/lib/scroll.js"></script>
     <script src="/lib/w3.js"></script>
+    <script src="/lib/httpGet.js"></script>
     <script>
         // Used to toggle the menu on small screens when clicking on the menu button
         function NavBar() {
@@ -28,7 +30,6 @@
 
     </script>
     <script>
-
         function loaderfunction() {
             document.getElementById("menupagename").innerHTML = document.title.slice(0, -9);
             document.getElementById(window.location.pathname + "").classList.add('w3-white');
@@ -39,30 +40,30 @@
     </script>
 </head>
 
-
 <body onload="loaderfunction();">
 
     <!-- Navbar -->
     <?php include "../includes/menu.html"?>
 
-
     <!-- Header -->
-    <header class="w3-container w3-blue w3-center" style="padding:128px 16px">
+    <header class="w3-container w3-blue w3-center" style="padding:50px 51px" onload="document.getElementById(location.pathname).className = 'w3-white';">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <h1 class="w3-margin w3-jumbo">403</h1>
-        <p class="w3-xlarge">Forbidden: Access is denied</p> <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="EPPZScrollTo.scrollVerticalToElementById('about', 90);">What happened?</button> </header>
+        <h1 class="w3-margin w3-jumbo" style="padding-top:51px;">403</h1>
+        <p class="w3-xlarge">Permission denied</p>
+    </header>
     <!-- First Grid -->
+    
     <div class="w3-row-padding w3-padding-64 w3-container">
         <div class="w3-content" id="about">
             <div class="w3-twothird">
                 <h1>What happened?</h1>
-                <h5 class="w3-padding-32">You do not have permission to view this directory or page using the credentials that you supplied. If you believe you have found a broken link please <a href="/contact/">Contact us.</a></h5>
-                <p class="w3-text-grey">You can go to the <a href="/">Homepage </a> </p>
+                <h5 class="w3-padding-32">You do not have permission to view this directory or page using the credentials that you supplied. If you believe you have found a broken link please <a href="/contact/">Contact us.</a> You can go to the <a href="/">Homepage.</a></h5>
+                <p class="w3-text-grey">In the meantime, have a pun: <i> <strong> <?php echo(file('puns.txt')[rand(0, sizeof(file("puns.txt")))]); ?> </strong> </i></p>  
             </div>
             <div class="w3-third w3-center"> <br> <img src="/images/global/logo.png"> </div>
         </div>
     </div>
-
+    <!-- Footer -->
     <?php include "../includes/footer.html"?>
 </body>
 
